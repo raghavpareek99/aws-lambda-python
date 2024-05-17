@@ -1,8 +1,6 @@
 # AWS Lambda Middleware
 
-[![Built For][ico-built-for]][link-built-for]
-[![Software License][ico-license]][link-license]
-[![Source Code][ico-source]][link-source]
+
 
 Middleware (Python) to automatically log API calls from AWS Lambda functions
 and sends to [Moesif](https://www.moesif.com) for API analytics and log analysis. 
@@ -405,18 +403,4 @@ companyB = {
 update_companies_batch([companyA, companyB], moesif_options)
 ```
 
-## Examples
 
-- [A complete example is available on GitHub](https://github.com/Moesif/moesif-aws-lambda-python-example).
-
-## Other integrations
-
-To view more documentation on integration options, please visit __[the Integration Options Documentation](https://www.moesif.com/docs/getting-started/integration-options/).__
-
-[ico-built-for]: https://img.shields.io/badge/built%20for-aws%20lambda-blue.svg
-[ico-license]: https://img.shields.io/badge/License-Apache%202.0-green.svg
-[ico-source]: https://img.shields.io/github/last-commit/moesif/moesif-aws-lambda-python.svg?style=social
-
-[link-built-for]: https://aws.amazon.com/lambda/
-[link-license]: https://raw.githubusercontent.com/Moesif/moesif-aws-lambda-python/master/LICENSE
-[link-source]: https://github.com/moesif/moesif-aws-lambda-python
