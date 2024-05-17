@@ -11,52 +11,7 @@ as a trigger.
 This middleware expects the
 [Lambda proxy integration type.](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-set-up-simple-proxy.html#api-gateway-set-up-lambda-proxy-integration-on-proxy-resource)
 If you're using AWS Lambda with API Gateway, you are most likely using the proxy integration type.
-
-## How to install
-
-```shell
-pip install moesif_aws_lambda
-```
-
-## How to use
-
-### 1. Add middleware to your Lambda application.
-
-```python
-from moesif_aws_lambda.middleware import MoesifLogger
-
-moesif_options = {
-    'LOG_BODY': True
-}
-
-@MoesifLogger(moesif_options)
-def lambda_handler(event, context):
-    return {
-        'statusCode': 200,
-        'isBase64Encoded': False,
-        'body': {
-            'msg': 'Hello from Lambda!'
-        },
-        'headers': {
-            'Content-Type': 'application/json'
-        }
-    }
-```
-
-### 2. Set MOESIF_APPLICATION_ID environment variable 
-
-Add a new environment variable with the name `MOESIF_APPLICATION_ID` and the value being your Moesif application id,
-which can be found in the [_Moesif Portal_](https://www.moesif.com/).
-After signing up for a Moesif account, your Moesif Application Id will be displayed during the onboarding steps. 
-
-You can always find your Moesif Application Id at any time by logging 
-into the [_Moesif Portal_](https://www.moesif.com/), click on the top right menu,
- and then clicking _Installation_.
-
-### 3. Trigger your API
-Grab the URL to your API Gateway or LB and make some calls using a tool like Postman or CURL. 
-
-> In order for your event to log to Moesif, you must test using the Amazon API Gateway trigger. Do not invoke your lambda directly using AWS Console as the payload won't contain a valid HTTP payload.  
+ 
 
 ## Repo file structure
 
