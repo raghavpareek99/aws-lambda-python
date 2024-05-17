@@ -1,4 +1,4 @@
-# Moesif AWS Lambda Middleware
+# AWS Lambda Middleware
 
 [![Built For][ico-built-for]][link-built-for]
 [![Software License][ico-license]][link-license]
